@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
     const input = document.querySelector('#cityVal')
     form.addEventListener('submit', (e) => {
     e.preventDefault();
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=ceb9ca9f68496c5837fe37d3f65bd9e7`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=ceb9ca9f68496c5837fe37d3f65bd9e7`)
         .then(response => response.json())
         .then(cityData => {
             show(cityData)
