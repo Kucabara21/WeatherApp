@@ -38,5 +38,5 @@ function show(data){
             city.innerHTML = `${name}, ${country}`;
             weather.innerHTML = `${main}`;
             temp.innerHTML = `${celc}`;
-            weatherIcon.src = `http://openweathermap.org/img/w/${icon}.png`;
+            weatherIcon.src = `https://openweathermap.org/img/w/${icon}.png`;
 }
