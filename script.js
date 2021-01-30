@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
     navigator.geolocation.getCurrentPosition((position) => {
         let lat = position.coords.latitude;
         let long = position.coords.longitude;
-        fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=ceb9ca9f68496c5837fe37d3f65bd9e7`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=ceb9ca9f68496c5837fe37d3f65bd9e7`)
             .then(response => response.json())
             .then(data => {
                show(data)
