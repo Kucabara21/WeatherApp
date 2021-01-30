@@ -30,13 +30,12 @@ window.addEventListener('load', () => {
 
 
 function show(data){
-     console.log(data)
-            const {name} = data;
-            const {main, icon} = data.weather[0];
-            const celc = parseInt(data.main.temp) -273;
-            const {country} = data.sys;
-            city.innerHTML = `${name}, ${country}`;
-            weather.innerHTML = `${main}`;
-            temp.innerHTML = `${celc}`;
-            weatherIcon.src = `https://openweathermap.org/img/w/${icon}.png`;
+        const {name} = data;
+        const {main, icon} = data.weather[0];
+        const celc = parseInt(data.main.temp) -273;
+        const {country} = data.sys;
+        city.innerHTML = `${name}, ${country}`;
+        weather.innerHTML = `${main}`;
+        temp.innerHTML = `${celc}`;
+        weatherIcon.src = `https://openweathermap.org/img/w/${icon}.png`;
 }
