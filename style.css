@@ -96,7 +96,7 @@ h1{
     button{
         width: 20%;
         height: 100%;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.877);
     }
     button img{
         width: 40%;
