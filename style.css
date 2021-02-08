@@ -3,8 +3,14 @@
     padding: 0;
 }
 body{
+    overflow: hidden;
     background-image: url('weather.jpg');
     background-size: cover;
+    transition: all 300ms ease-in-out;
+}
+.cover{
+    position: absolute;
+    width: 100%;
 }
 .flexBox{
     color: white;
@@ -28,10 +34,17 @@ form input{
     width: 50%;
     box-shadow: none;
     margin-right: .5rem;
+    border-radius: 1rem;
+    border: none;
 }
 button{
     width: 15%;
     height: 100%;
+    border-radius: 1rem;
+    border: none;
+}
+button img{
+    width: 30%;
 }
 .heading{
     display: flex;
@@ -58,4 +71,33 @@ h1{
     font-size: 1.8rem;
     line-height: 3.3rem;
 
+}
+@media only screen and (max-width: 600px){
+    .flexBox{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        height: 60%;
+        width: 70%;
+    }
+
+    form input{
+        padding-left: .5rem;
+        width: 70%;
+        box-shadow: none;
+        margin-right: .5rem;
+    }
+    button{
+        width: 20%;
+        height: 100%;
+    }
+    button img{
+        width: 40%;
+    }
 }

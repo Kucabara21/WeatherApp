@@ -1,3 +1,4 @@
+const body = document.querySelector('body')
 const city = document.querySelector('.city')
 const weather = document.querySelector('.weather')
 const temp = document.querySelector('.temp')
@@ -38,4 +39,22 @@ function show(data){
         weather.innerHTML = `${main}`;
         temp.innerHTML = `${celc}`;
         weatherIcon.src = `https://openweathermap.org/img/w/${icon}.png`;
+        switch (main) {
+            case 'Rain':
+                body.style.backgroundImage = "url('rainy.jpg')"
+                break;
+            case 'Snow':
+                body.style.backgroundImage = "url('snow.jpg')"
+                break;
+
+            default:
+                body.style.backgroundImage = "url('weather.jpg')"
+                break;
+        }
+        // if(main == 'Rain'){
+        //     body.style.backgroundImage = "url('rainy.jpg')"
+        // }
+        // else{
+        //     body.style.backgroundImage = "url('weather.jpg')"
+        // }
 }
